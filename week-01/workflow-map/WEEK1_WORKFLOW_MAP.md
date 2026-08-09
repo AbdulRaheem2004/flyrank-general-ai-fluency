@@ -1,4 +1,4 @@
-# FlyRank AI Internship — Week 2 Deliverable
+# FlyRank AI Internship — Week 1 Deliverable
 ## Assignment: Multi-AI Workflow & Toolstack Handoff Map
 **Track**: General AI Fluency  
 **Intern**: Abdul Raheem  
