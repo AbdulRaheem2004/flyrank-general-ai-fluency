@@ -1,0 +1,20 @@
+graph TD
+    %% Styling
+    classDef primary fill:#1e1b4b,stroke:#6366f1,stroke-width:2px,color:#fff,font-weight:bold;
+    classDef section fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#f8fafc;
+    classDef cta fill:#059669,stroke:#34d399,stroke-width:2px,color:#fff,font-weight:bold;
+    classDef component fill:#1e293b,stroke:#475569,stroke-width:1px,color:#cbd5e1;
+
+    %% Sitemap Architecture
+    Land[("1. Visitor Lands<br/>(Target: ML Hiring Manager / Lead Agentic Engineer)")] ::: primary
+
+    Land --> Hero["2. Hero Section<br/>• Bold Claim: Production ML Systems<br/>• Key Metric Badges (F1, Latency)<br/>• Direct CTA Button"] ::: section
+    
+    Hero --> CTA["3. Single Desired Action<br/>'Book 15-min Technical Chat' / 'View GitHub Demos'"] ::: cta
+
+    Land --> Proof["4. Proof Section (Work / Case Studies)<br/>• Capstone ML Lane Model<br/>• Code Repos + Live Interactive Demos<br/>• Architecture Diagrams & Benchmarks"] ::: section
+
+    Land --> About["5. About / Stack Section<br/>• Micro Bio & Background<br/>• Toolstack (Claude, Gemini, PyTorch, Antigravity)<br/>• FlyRank Cohort Badges"] ::: section
+
+    Proof --> CTA
+    About --> CTA

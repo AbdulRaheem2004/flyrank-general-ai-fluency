@@ -1,0 +1,24 @@
+graph TD
+    Task["🎯 Task Origin (Feature, Refactor, Bug, Research)"]
+    
+    Task --> Decision{"Is it Docs/Research?"}
+    
+    Decision -- "Yes: Docs / API Search" --> Perplexity["🔍 Perplexity AI (Live Documentation & Real-time Web Search)"]
+    Perplexity --> Context["Context & Code Snippets"]
+    
+    Decision -- "No: Engineering Work" --> Arch{"Task Scale & Depth"}
+    
+    Arch -- "High Context / Multimodal" --> Gemini["♊ Gemini (Large Document / Video / Architecture Analysis)"]
+    Arch -- "Deep Architecture / Refactoring" --> Claude["🧠 Claude (System Design & Complex Logic)"]
+    Arch -- "Quick Syntax / One-liners" --> ChatGPT["⚡ ChatGPT (Rapid Prototyping & Syntax Checks)"]
+    Arch -- "Full Execution & IDE Integration" --> Antigravity["🚀 Antigravity (Agentic Codebase Edits & Local Execution)"]
+    
+    Context --> Antigravity
+    Gemini --> Antigravity
+    Claude --> Antigravity
+    ChatGPT --> Antigravity
+    
+    Antigravity --> HumanCheck{"🛡️ Human Quality Bar & Pressure-Test"}
+    HumanCheck -- "Passes Metrics & Rubric" --> Ship["✅ Ship Proof Artifact (GitHub / Portal Submissions)"]
+    HumanCheck -- "Fails / Edge Cases Found" --> Refine["🔄 Refine Prompt / Adjust Architecture"]
+    Refine --> Antigravity
