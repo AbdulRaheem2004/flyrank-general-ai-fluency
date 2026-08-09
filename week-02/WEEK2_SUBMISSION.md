@@ -3,6 +3,7 @@
 **Track**: General AI Fluency  
 **Intern**: Abdul Raheem  
 **Status**: Ready for Submission  
+**PDF Deliverable**: [WEEK2_SUBMISSION.pdf](file:///e:/Projects/General%20AI%20Fluency/week-02/WEEK2_SUBMISSION.pdf)  
 
 ---
 

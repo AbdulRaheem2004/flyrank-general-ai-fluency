@@ -15,13 +15,15 @@ Welcome to my official repository for the **FlyRank AI Internship (General AI Fl
 
 ## 📅 Assignments & Track Progress
 
-| Assignment # | Focus Area | Status | Directory / Submissions |
+| Assignment # | Focus Area | Status | Markdown & PDF Deliverables |
 | :--- | :--- | :--- | :--- |
-| **Assignment 1** | Onboarding: Draw the Path (Sitemap & Setup) | ✅ **Completed** | [`week-01-draw-the-path/`](./week-01-draw-the-path/) |
-| **Assignment 2** | Workflow & Multi-AI Toolstack Map | 🚀 **In Progress** | [`week-02-workflow-map/`](./week-02-workflow-map/) |
-| **Assignment 3** | Prompt SOP & Workflow System Library | 🔜 **Upcoming** | [`week-03-prompt-library/`](./week-03-prompt-library/) |
-| **Assignment 4** | AI Output Verification & Evaluation Rubric | 🔜 **Upcoming** | [`week-04-evaluation-rubric/`](./week-04-evaluation-rubric/) |
-| **Assignment 5** | Proof-Backed Portfolio Web Application | 🔜 **Upcoming** | [`week-05-portfolio-artifact/`](./week-05-portfolio-artifact/) |
+| **Assignment 1A** | What Are You Proving? (Proof Statement) | ✅ **Completed** | [Markdown](./week-01/what-are-you-proving/WEEK1_WHAT_ARE_YOU_PROVING.md) \| [PDF](./week-01/what-are-you-proving/WEEK1_WHAT_ARE_YOU_PROVING.pdf) |
+| **Assignment 1B** | Draw the Path (Sitemap & Setup) | ✅ **Completed** | [Markdown](./week-01/draw-the-path/WEEK1_SUBMISSION.md) \| [PDF](./week-01/draw-the-path/WEEK1_SITEMAP_SUBMISSION.pdf) |
+| **Assignment 1C** | Workflow & Multi-AI Toolstack Map | ✅ **Completed** | [Markdown](./week-01/workflow-map/WEEK1_WORKFLOW_MAP.md) \| [PDF](./week-01/workflow-map/WEEK1_WORKFLOW_MAP.pdf) |
+| **Assignment 2** | Frame It as Cases: Work That Speaks | ✅ **Completed** | [Markdown](./week-02/WEEK2_SUBMISSION.md) \| [PDF](./week-02/WEEK2_SUBMISSION.pdf) |
+| **Assignment 3** | Prompt SOP & Workflow System Library | 🔜 **Upcoming** | [`week-03/`](./week-03/) |
+| **Assignment 4** | AI Output Verification & Evaluation Rubric | 🔜 **Upcoming** | [`week-04/`](./week-04/) |
+| **Assignment 5** | Proof-Backed Portfolio Web Application | 🔜 **Upcoming** | [`week-05/`](./week-05/) |
 | **Capstone** | Personal AI Operating System | 🔜 **Upcoming** | [`capstone-ai-os/`](./capstone-ai-os/) |
 
 ---
@@ -39,9 +41,9 @@ Welcome to my official repository for the **FlyRank AI Internship (General AI Fl
 ## 📁 Repository Navigation
 
 * [`AGENTS.md`](./AGENTS.md) — System instructions & FlyRank AI Tutor guidelines.
-* [`week-01-draw-the-path/`](./week-01-draw-the-path/) — Week 1 submission: Portfolio sitemap sketch, AI pressure-test log, and toolkit verification.
-* [`week-02-workflow-map/`](./week-02-workflow-map/) — Week 2 submission: Multi-AI tool routing & human-AI boundary handoffs.
-* [`week-03-prompt-library/`](./week-03-prompt-library/) — Standard operating procedures & context prompt templates.
-* [`week-04-evaluation-rubric/`](./week-04-evaluation-rubric/) — AI output verification rubric & quality assurance audit.
-* [`week-05-portfolio-artifact/`](./week-05-portfolio-artifact/) — Interactive proof portfolio web application.
-* [`capstone-ai-os/`](./capstone-ai-os/) — Personal AI Operating System capstone repo.
+* [`generate_pdfs.py`](./generate_pdfs.py) & [`build_all_assignment_pdfs.py`](./build_all_assignment_pdfs.py) — Automated PDF generator engine.
+* [`week-01/what-are-you-proving/`](./week-01/what-are-you-proving/) — Proof statement, target persona, CTA, & audit checklist ([Markdown](./week-01/what-are-you-proving/WEEK1_WHAT_ARE_YOU_PROVING.md) | [PDF](./week-01/what-are-you-proving/WEEK1_WHAT_ARE_YOU_PROVING.pdf)).
+* [`week-01/draw-the-path/`](./week-01/draw-the-path/) — Portfolio sitemap sketch, wireframe, AI pressure-test log, & toolkit verification ([Markdown](./week-01/draw-the-path/WEEK1_SUBMISSION.md) | [PDF](./week-01/draw-the-path/WEEK1_SITEMAP_SUBMISSION.pdf)).
+* [`week-01/workflow-map/`](./week-01/workflow-map/) — Multi-AI tool routing & human-AI boundary handoffs ([Markdown](./week-01/workflow-map/WEEK1_WORKFLOW_MAP.md) | [PDF](./week-01/workflow-map/WEEK1_WORKFLOW_MAP.pdf)).
+* [`week-02/`](./week-02/) — 3 case studies (Beat 1/2/3), voice card, micro bio, CTA, before/after copy audit ([Markdown](./week-02/WEEK2_SUBMISSION.md) | [PDF](./week-02/WEEK2_SUBMISSION.pdf)).
+* [`capstone-ai-os/`](./capstone-ai-os/) — Personal AI Operating System capstone directory.
