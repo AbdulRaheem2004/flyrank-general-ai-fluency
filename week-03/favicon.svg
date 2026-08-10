@@ -1,0 +1,5 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="6" fill="#0F172A"/>
+  <text x="6.5" y="21" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="800" font-size="14" fill="#F8FAFC" letter-spacing="-0.5">AR</text>
+  <circle cx="25" cy="7" r="3" fill="#059669"/>
+</svg>

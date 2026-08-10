@@ -1,0 +1,53 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Slate Background -->
+  <rect width="800" height="500" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  
+  <!-- Browser Header Bar -->
+  <rect width="800" height="40" rx="8" fill="#0F172A"/>
+  <circle cx="20" cy="20" r="6" fill="#EF4444"/>
+  <circle cx="40" cy="20" r="6" fill="#F59E0B"/>
+  <circle cx="60" cy="20" r="6" fill="#10B981"/>
+  <rect x="180" y="8" width="440" height="24" rx="4" fill="#1E293B"/>
+  <text x="400" y="24" font-family="'JetBrains Mono', monospace" font-size="12" fill="#94A3B8" text-anchor="middle">https://abdulraheem.ai/portfolio</text>
+  
+  <!-- App Navbar -->
+  <rect x="0" y="40" width="800" height="50" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Logo -->
+  <rect x="25" y="50" width="30" height="30" rx="6" fill="#F8FAFC" stroke="#0F172A" stroke-width="1.5"/>
+  <text x="32" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="12" fill="#0F172A">AR</text>
+  <circle cx="48" cy="56" r="2.5" fill="#059669"/>
+  <text x="68" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" fill="#0F172A">Abdul Raheem</text>
+  
+  <!-- Nav CTA -->
+  <rect x="620" y="50" width="155" height="30" rx="6" fill="#1E40AF"/>
+  <text x="697" y="69" font-family="'Inter', sans-serif" font-weight="600" font-size="12" fill="#FFFFFF" text-anchor="middle">Book Intro Chat (15m)</text>
+  
+  <!-- Hero Content -->
+  <text x="40" y="140" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="24" fill="#0F172A">Production-Ready ML Systems</text>
+  <text x="40" y="165" font-family="'Inter', sans-serif" font-weight="400" font-size="14" fill="#64748B">Verifiable metrics, benchmark notebooks &amp; zero-friction visual interfaces.</text>
+  
+  <!-- Interactive Modal Overlay (0-click / 1-click CTA) -->
+  <rect x="150" y="190" width="500" height="260" rx="10" fill="#FFFFFF" filter="drop-shadow(0 20px 25px rgba(15, 23, 42, 0.15))" stroke="#0F172A" stroke-width="1.5"/>
+  
+  <!-- Modal Header -->
+  <rect x="150" y="190" width="500" height="45" rx="10" fill="#0F172A"/>
+  <text x="180" y="218" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" fill="#F8FAFC">Schedule 15-Min Technical Intro Chat</text>
+  <text x="625" y="218" font-family="'Inter', sans-serif" font-weight="600" font-size="14" fill="#94A3B8">✕</text>
+  
+  <!-- Calendar Inputs -->
+  <rect x="180" y="255" width="210" height="36" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="195" y="278" font-family="'Inter', sans-serif" font-size="12" fill="#0F172A">📅 Tue, Aug 12, 2026</text>
+  
+  <rect x="410" y="255" width="210" height="36" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="425" y="278" font-family="'Inter', sans-serif" font-size="12" fill="#0F172A">⏰ 10:00 AM EST</text>
+  
+  <!-- Email Input -->
+  <rect x="180" y="305" width="440" height="36" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="195" y="328" font-family="'Inter', sans-serif" font-size="12" fill="#64748B">Enter your work email (e.g. lead@company.ai)...</text>
+  
+  <!-- Confirm Button -->
+  <rect x="180" y="360" width="440" height="40" rx="6" fill="#059669"/>
+  <text x="400" y="385" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">Confirm Meeting Request (Instant)</text>
+  
+  <text x="400" y="425" font-family="'JetBrains Mono', monospace" font-size="11" fill="#059669" text-anchor="middle">ZERO-FRICTION ENGINE: 0 CLICKS TO RELEVANT PROOF</text>
+</svg>

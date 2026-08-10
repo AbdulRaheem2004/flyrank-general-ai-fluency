@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdul Raheem — Portfolio Identity Kit (Week 3)</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-canvas: #F8FAFC;
+      --text-dark: #0F172A;
+      --brand-main: #1E40AF;
+      --metric-emerald: #059669;
+      --border-muted: #CBD5E1;
+      --text-muted: #64748B;
+      
+      --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-code: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-dark);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      padding: 2.5rem 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1.5px solid var(--border-muted);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .brand-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(5, 150, 105, 0.1);
+      color: var(--metric-emerald);
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-family: var(--font-code);
+      font-size: 0.8125rem;
+      font-weight: 600;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--metric-emerald);
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 2.25rem;
+      letter-spacing: -0.02em;
+      color: var(--text-dark);
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-top: 0.25rem;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-number {
+      font-family: var(--font-code);
+      color: var(--brand-main);
+      font-size: 1.1rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-muted);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+    }
+
+    /* Color Swatches */
+    .swatch-color {
+      height: 90px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      display: flex;
+      align-items: flex-end;
+      padding: 0.75rem;
+      position: relative;
+    }
+
+    .swatch-hex {
+      font-family: var(--font-code);
+      font-weight: 600;
+      font-size: 0.875rem;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      color: var(--text-dark);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .swatch-bg { background-color: #F8FAFC; }
+    .swatch-text { background-color: #0F172A; }
+    .swatch-text .swatch-hex { background: rgba(15, 23, 42, 0.8); color: #F8FAFC; }
+    .swatch-brand { background-color: #1E40AF; }
+    .swatch-brand .swatch-hex { background: rgba(30, 64, 175, 0.8); color: #F8FAFC; }
+    .swatch-accent { background-color: #059669; }
+    .swatch-accent .swatch-hex { background: rgba(5, 150, 105, 0.8); color: #F8FAFC; }
+
+    .swatch-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .swatch-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Typography Section */
+    .type-spec {
+      background: #FFFFFF;
+      border: 1px solid var(--border-muted);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .type-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 1.5rem;
+      padding-vertical: 1.25rem;
+      border-bottom: 1px solid #E2E8F0;
+      align-items: center;
+      padding: 1.25rem 0;
+    }
+
+    .type-row:last-child {
+      border-bottom: none;
+    }
+
+    .type-meta {
+      font-family: var(--font-code);
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    .type-sample-h1 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.75rem;
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+    }
+
+    .type-sample-body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--text-dark);
+    }
+
+    .type-sample-code {
+      font-family: var(--font-code);
+      font-size: 0.9rem;
+      color: var(--metric-emerald);
+      background: #F1F5F9;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    /* Logo & Favicon Section */
+    .assets-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .asset-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-muted);
+      border-radius: 12px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .asset-preview {
+      background: var(--bg-canvas);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px dashed var(--border-muted);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    /* Style Note Box */
+    .style-note-box {
+      background: #FFFFFF;
+      border: 2px solid var(--brand-main);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .style-note-badge {
+      position: absolute;
+      top: -12px;
+      left: 1.5rem;
+      background: var(--brand-main);
+      color: #FFFFFF;
+      font-family: var(--font-code);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.15rem 0.6rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .style-note-content {
+      font-family: var(--font-code);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--text-dark);
+      background: #F8FAFC;
+      padding: 1.25rem;
+      border-radius: 8px;
+      border: 1px solid #E2E8F0;
+    }
+
+    /* Checklist */
+    .checklist-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-muted);
+      border-radius: 12px;
+      padding: 1.75rem;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+      font-size: 0.95rem;
+    }
+
+    .check-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .check-icon {
+      width: 20px;
+      height: 20px;
+      background: rgba(5, 150, 105, 0.15);
+      color: var(--metric-emerald);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-muted);
+      padding-top: 1.5rem;
+      margin-top: 3rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <div class="brand-header">
+        <svg width="36" height="36" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="38" height="38" rx="8" fill="#F8FAFC" stroke="#0F172A" stroke-width="2"/>
+          <text x="10" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" fill="#0F172A">AR</text>
+          <circle cx="31" cy="9" r="3.5" fill="#059669" stroke="#F8FAFC" stroke-width="1.5"/>
+        </svg>
+        <h1>Portfolio Identity Kit</h1>
+      </div>
+      <p class="subtitle">FlyRank AI Internship — Week 3 Assignment Deliverable</p>
+    </div>
+    <div class="header-badge">
+      <span class="status-dot"></span> Decided Once & Saved
+    </div>
+  </header>
+
+  <!-- Section 1: Color Palette -->
+  <section>
+    <h2 class="section-title"><span class="section-number">01</span> Color Palette (4 Tokens)</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="swatch-color swatch-bg">
+          <span class="swatch-hex">#F8FAFC</span>
+        </div>
+        <div class="swatch-title">Slate Canvas</div>
+        <div class="swatch-desc">Near-white background for crisp, laboratory readability without glare.</div>
+      </div>
+      <div class="card">
+        <div class="swatch-color swatch-text">
+          <span class="swatch-hex">#0F172A</span>
+        </div>
+        <div class="swatch-title">Dark Slate</div>
+        <div class="swatch-desc">Near-black text and structural borders for high-contrast clarity.</div>
+      </div>
+      <div class="card">
+        <div class="swatch-color swatch-brand">
+          <span class="swatch-hex">#1E40AF</span>
+        </div>
+        <div class="swatch-title">Tech Sapphire</div>
+        <div class="swatch-desc">Primary brand anchor for navigation, hero headers, and primary CTAs.</div>
+      </div>
+      <div class="card">
+        <div class="swatch-color swatch-accent">
+          <span class="swatch-hex">#059669</span>
+        </div>
+        <div class="swatch-title">Empirical Emerald</div>
+        <div class="swatch-desc">Reserved strictly for benchmark metrics, F1 scores, and live status.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Typography -->
+  <section>
+    <h2 class="section-title"><span class="section-number">02</span> Typography System</h2>
+    <div class="type-spec">
+      <div class="type-row">
+        <div class="type-meta">
+          <strong>Heading Font</strong><br>
+          Plus Jakarta Sans<br>
+          Bold (700 / 800)
+        </div>
+        <div class="type-sample-h1">
+          Production-Ready ML Systems & Verifiable Metrics
+        </div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <strong>Body Font</strong><br>
+          Inter<br>
+          Regular (400)
+        </div>
+        <div class="type-sample-body">
+          A consistent look is what separates a portfolio that feels intentional from one that feels thrown together. Make decisions once so every case study inherits them.
+        </div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">
+          <strong>Metrics / Code</strong><br>
+          JetBrains Mono<br>
+          Medium (500)
+        </div>
+        <div>
+          <span class="type-sample-code">F1 Score: 0.942 | Inference Latency: 12.4ms | Baseline Gain: +18.6%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Logo & Favicon -->
+  <section>
+    <h2 class="section-title"><span class="section-number">03</span> Logo & Favicon Monogram</h2>
+    <div class="assets-grid">
+      <div class="asset-box">
+        <div class="asset-preview">
+          <svg width="48" height="48" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="38" height="38" rx="8" fill="#F8FAFC" stroke="#0F172A" stroke-width="2"/>
+            <text x="10" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" fill="#0F172A">AR</text>
+            <circle cx="31" cy="9" r="3.5" fill="#059669" stroke="#F8FAFC" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="swatch-title">Primary Monogram Logo</div>
+        <div class="swatch-desc">Vector SVG mark for site header and project cards.</div>
+      </div>
+
+      <div class="asset-box">
+        <div class="asset-preview">
+          <svg width="40" height="40" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="6" fill="#0F172A"/>
+            <text x="6.5" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="14" fill="#F8FAFC">AR</text>
+            <circle cx="25" cy="7" r="3" fill="#059669"/>
+          </svg>
+        </div>
+        <div class="swatch-title">Browser Favicon</div>
+        <div class="swatch-desc">High-contrast 32px SVG icon for tab bar identity.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Two-Line Style Note -->
+  <section>
+    <h2 class="section-title"><span class="section-number">04</span> AI Agent Style Note</h2>
+    <div class="style-note-box">
+      <span class="style-note-badge">Claude Project & AGENTS.md Note</span>
+      <div class="style-note-content">
+        Fonts: Plus Jakarta Sans (Headings), Inter (Body), JetBrains Mono (Metrics). Palette: #F8FAFC (Bg), #0F172A (Text), #1E40AF (Main), #059669 (Metric Accent).<br>
+        Mood: Minimal, high-precision technical lab aesthetic designed to let empirical benchmark data and clean interactive ML tools take center stage.
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Pass/Revise Audit Checklist -->
+  <section>
+    <h2 class="section-title"><span class="section-number">05</span> Pass / Revise Audit Checklist</h2>
+    <div class="checklist-card">
+      <div class="check-item">
+        <span class="check-icon">✓</span>
+        <div><strong>One or two fonts, not a pile:</strong> Plus Jakarta Sans (Headings), Inter (Body), JetBrains Mono (Metrics).</div>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">✓</span>
+        <div><strong>A tight palette (3-4 colors) with hex codes:</strong> #F8FAFC (Bg), #0F172A (Text), #1E40AF (Main), #059669 (Accent).</div>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">✓</span>
+        <div><strong>A simple logo or favicon exists:</strong> Minimal AR monogram with status dot saved as scalable SVG assets.</div>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">✓</span>
+        <div><strong>Style note describes a single coherent mood:</strong> Minimal high-precision lab framing that highlights empirical proof.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>Abdul Raheem — FlyRank AI Internship</div>
+    <div>General AI Fluency Track • Week 3 Identity Kit</div>
+  </footer>
+
+</body>
+</html>
