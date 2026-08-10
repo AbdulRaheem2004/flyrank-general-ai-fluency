@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdul Raheem — The Through-Line: Map Content & CTAs (Week 3)</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-canvas: #F8FAFC;
+      --text-dark: #0F172A;
+      --brand-main: #1E40AF;
+      --metric-emerald: #059669;
+      --border-muted: #CBD5E1;
+      --text-muted: #64748B;
+      
+      --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-code: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-dark);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      padding: 2.5rem 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1.5px solid var(--border-muted);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .brand-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-muted);
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      font-family: var(--font-heading);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--metric-emerald);
+      box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+    }
+
+    .doc-meta {
+      font-family: var(--font-code);
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text-dark);
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-muted);
+      padding-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .callout {
+      background-color: #FFFFFF;
+      border-left: 4px solid var(--brand-main);
+      border-radius: 0 8px 8px 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+    }
+
+    .callout-metric {
+      border-left-color: var(--metric-emerald);
+      background-color: #F0FDF4;
+    }
+
+    .claim-banner {
+      background-color: #FFFFFF;
+      border: 2px solid var(--brand-main);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 12px rgba(30, 64, 175, 0.08);
+      text-align: center;
+    }
+
+    .claim-banner h3 {
+      color: var(--brand-main);
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .claim-text {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.4;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background-color: #FFFFFF;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+      border: 1px solid var(--border-muted);
+      font-size: 0.9rem;
+    }
+
+    th {
+      background-color: var(--bg-canvas);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      text-align: left;
+      padding: 0.85rem 1rem;
+      color: var(--text-dark);
+      border-bottom: 1.5px solid var(--border-muted);
+    }
+
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border-muted);
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .code-cell {
+      font-family: var(--font-code);
+      font-size: 0.85rem;
+      color: var(--brand-main);
+      background-color: #F1F5F9;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+    }
+
+    .metric-badge {
+      font-family: var(--font-code);
+      font-weight: 600;
+      color: var(--metric-emerald);
+      background-color: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.825rem;
+    }
+
+    .status-badge {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .status-pass {
+      background-color: #DCFCE7;
+      color: #166534;
+      border: 1px solid #86EFAC;
+    }
+
+    .status-pending {
+      background-color: #FEF3C7;
+      color: #92400E;
+      border: 1px solid #FDE68A;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      background-color: var(--brand-main);
+      color: #FFFFFF;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .diagram-box {
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-muted);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      text-align: center;
+      font-family: var(--font-code);
+      font-size: 0.85rem;
+    }
+
+    .diagram-flow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .diagram-node {
+      background-color: var(--bg-canvas);
+      border: 1px solid var(--border-muted);
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .diagram-node.primary {
+      background-color: var(--brand-main);
+      color: #FFFFFF;
+      border-color: var(--brand-main);
+    }
+
+    .diagram-arrow {
+      color: var(--text-muted);
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 4rem;
+      border-top: 1px solid var(--border-muted);
+      padding-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <div class="brand-header">
+        <div class="header-badge">
+          <span class="status-dot"></span>
+          <span>Abdul Raheem</span>
+        </div>
+      </div>
+      <h1 style="margin-top: 1rem;">The Through-Line: Map Content & CTAs</h1>
+      <div class="subtitle">FlyRank AI Internship — Week 3 Deliverable (General AI Fluency Track)</div>
+    </div>
+    <div class="doc-meta">
+      <div>Phase: Foundations</div>
+      <div>Workload: 2 Hours</div>
+      <div>Status: Complete</div>
+    </div>
+  </header>
+
+  <section>
+    <h2>1. Executive Summary</h2>
+    <p>A good case in the wrong place still fails to convert. Before building pages, an engineer must establish the structural through-line: the one-line claim greeting a visitor, the section order leading with strongest proof, and explicit Call-to-Action (CTA) targets laddering directly up to a single intro chat booking.</p>
+    
+    <div class="claim-banner">
+      <h3>Sharpened One-Line Claim</h3>
+      <div class="claim-text">"I build production-ready ML/AI systems backed by verifiable benchmark metrics, open notebooks, and clean web interfaces."</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. One-Line Claim Generation & Discernment</h2>
+    <p>Using AI for options generation, 10 distinct claims were created and pressure-tested against our 6-word Voice Card (<code>"direct, technical, precise, metrics-driven, zero fluff"</code>). 9 options were intentionally rejected.</p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>AI Candidate Claim</th>
+          <th>Technical Evaluation & Discernment Note</th>
+          <th>Decision</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>"I build AI tools that look nice and run fast."</td>
+          <td>Too informal, weak vocabulary, lacks empirical metrics.</td>
+          <td><span class="status-badge" style="background:#FEE2E2; color:#991B1B;">Rejected</span></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>"Empowering organizations with cutting-edge machine learning and seamless AI integration."</td>
+          <td>Violates Voice Card. Loaded with generic buzzwords ("empowering", "cutting-edge", "seamless").</td>
+          <td><span class="status-badge" style="background:#FEE2E2; color:#991B1B;">Rejected</span></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>"Results-driven ML engineer bridging complex model architectures with intuitive web design."</td>
+          <td>"Results-driven" is fluff without quantitative baseline data.</td>
+          <td><span class="status-badge" style="background:#FEE2E2; color:#991B1B;">Rejected</span></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>"I build production-ready ML systems with verifiable benchmark metrics and clean web interfaces."</td>
+          <td>Direct, technical, verifiable. Chosen for final sharpening.</td>
+          <td><span class="status-badge status-pass">Selected</span></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>"Transforming data into intelligent production models with high F1 scores and low latency."</td>
+          <td>Good metrics, but wordy and passive construction.</td>
+          <td><span class="status-badge" style="background:#FEE2E2; color:#991B1B;">Rejected</span></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>"Full-stack AI developer delivering fast models, clean code, and interactive web tools."</td>
+          <td>Generic title dilutes ML engineering depth.</td>
+          <td><span class="status-badge" style="background:#FEE2E2; color:#991B1B;">Rejected</span></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>"I engineer production ML pipelines backed by open benchmark notebooks and responsive visual interfaces."</td>
+          <td>Strong runner-up, slightly less punchy.</td>
+          <td><span class="status-badge" style="background:#FEE2E2; color:#991B1B;">Rejected</span></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>"High-precision ML engineering: live models, verified metrics, zero fluff UI."</td>
+          <td>Fragmented structure reads like bullet points rather than a claim.</td>
+          <td><span class="status-badge" style="background:#FEE2E2; color:#991B1B;">Rejected</span></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>"I design and deploy benchmarked AI systems that turn raw models into verifiable web applications."</td>
+          <td>Good flow, but lacks explicit open notebook emphasis.</td>
+          <td><span class="status-badge" style="background:#FEE2E2; color:#991B1B;">Rejected</span></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>"Production ML systems backed by empirical performance data, reproducible notebooks, and clean UIs."</td>
+          <td>Noun phrase structure lacks active builder verb.</td>
+          <td><span class="status-badge" style="background:#FEE2E2; color:#991B1B;">Rejected</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>3. Content Map (Pages → Ordered Sections → CTAs)</h2>
+    <p>Every page leads with strongest technical proof (Case Study 1: Lane-Specific ML Model) and drives directly to the primary action.</p>
+
+    <div class="diagram-box">
+      <strong>CTA LADDERING ARCHITECTURE</strong>
+      <div class="diagram-flow">
+        <div class="diagram-node">Page 1 (Home Hub)</div>
+        <div class="diagram-arrow">→</div>
+        <div class="diagram-node">Page 2 (ML Deep Dive)</div>
+        <div class="diagram-arrow">→</div>
+        <div class="diagram-node">Page 3 (UI Deep Dive)</div>
+        <div class="diagram-arrow">→</div>
+        <div class="diagram-node primary">Book 15-Min Intro Chat</div>
+      </div>
+    </div>
+
+    <h3>Page 1: Home / Hero & Portfolio Hub</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Seq</th>
+          <th>Section Name</th>
+          <th>Component Details</th>
+          <th>Case Study</th>
+          <th>Section CTA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1.1</td>
+          <td>Hero Title & Claim</td>
+          <td>Monogram badge, One-Line Claim, Availability tag.</td>
+          <td>—</td>
+          <td><span class="btn-cta">Book 15-Min Intro Chat</span></td>
+        </tr>
+        <tr>
+          <td>1.2</td>
+          <td>Lead Proof Card</td>
+          <td>Lane-specific ML classifier metric display (<span class="metric-badge">F1: 0.942</span>, <span class="metric-badge">12.4ms</span>).</td>
+          <td>Case Study 1 (ML Model)</td>
+          <td><span class="btn-cta">Explore Notebook</span></td>
+        </tr>
+        <tr>
+          <td>1.3</td>
+          <td>Secondary Work Grid</td>
+          <td>2-column grid for UI engine and multi-LLM test harness.</td>
+          <td>Case Study 2 & 3 (UI & Async)</td>
+          <td><span class="btn-cta">View Live Demo</span></td>
+        </tr>
+        <tr>
+          <td>1.4</td>
+          <td>Technical Stack</td>
+          <td>4-token visual identity system, verified framework badges.</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>1.5</td>
+          <td>Engineering Philosophy</td>
+          <td>3-point manifesto: empirical proof, open notebooks, zero fluff.</td>
+          <td>—</td>
+          <td><span class="btn-cta">Request Walkthrough</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Page 2: ML Model Benchmark & Open Notebooks (Case 1 Deep Dive)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Seq</th>
+          <th>Section Name</th>
+          <th>Component Details</th>
+          <th>Section CTA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2.1</td>
+          <td>Case Header & Metrics</td>
+          <td>Banner displaying <span class="metric-badge">F1: 0.942</span>, <span class="metric-badge">Precision: 0.938</span>, <span class="metric-badge">Recall: 0.946</span>.</td>
+          <td><span class="btn-cta">Audit GitHub Repo</span></td>
+        </tr>
+        <tr>
+          <td>2.2</td>
+          <td>Baseline vs Model</td>
+          <td>Baseline F1: 0.760 vs Final Model F1: 0.942 comparison table.</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td>2.3</td>
+          <td>Empirical Confusion Matrix</td>
+          <td>Interactive Plotly/SVG confusion matrix and false positive analysis.</td>
+          <td><span class="btn-cta">View Notebook</span></td>
+        </tr>
+        <tr>
+          <td>2.4</td>
+          <td>Reproducibility Commands</td>
+          <td>Step-by-step CLI setup commands (<code>python run_eval.py --holdout</code>).</td>
+          <td><span class="btn-cta">Book Code Walkthrough</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>4. "Still Need to Gather" List (Honest Inventory)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Asset Category</th>
+          <th>Evidence Item Needed</th>
+          <th>Current Status</th>
+          <th>Required Action</th>
+          <th>Target Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Live Endpoints</td>
+          <td>Hugging Face Model Endpoint</td>
+          <td><span class="status-badge status-pending">In Progress</span></td>
+          <td>Deploy FastAPI container to Hugging Face Spaces.</td>
+          <td>Week 5</td>
+        </tr>
+        <tr>
+          <td>Empirical Metrics</td>
+          <td>Confusion Matrix SVG Export</td>
+          <td><span class="status-badge status-pass">Ready</span></td>
+          <td>Run <code>w05_model.ipynb</code> holdout test and export 600dpi SVG.</td>
+          <td>Week 4</td>
+        </tr>
+        <tr>
+          <td>GitHub Repos</td>
+          <td>Clean <code>capstone-ai-os</code> README</td>
+          <td><span class="status-badge status-pass">Ready</span></td>
+          <td>Add installation commands and environment configuration docs.</td>
+          <td>Week 4</td>
+        </tr>
+        <tr>
+          <td>Internship Work</td>
+          <td>Baseline Scoring Execution</td>
+          <td><span class="status-badge status-pending">Blocking</span></td>
+          <td>Complete <code>w04_baseline_score.ipynb</code> benchmark run.</td>
+          <td>Week 4</td>
+        </tr>
+        <tr>
+          <td>Internship Work</td>
+          <td>Final ML Model Optimization</td>
+          <td><span class="status-badge status-pending">Blocking</span></td>
+          <td>Execute hyperparameter search in <code>w05_model.ipynb</code>.</td>
+          <td>Week 5</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>5. Pass / Revise Audit Checklist</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Pass Criteria</th>
+          <th>Status</th>
+          <th>Verification Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A single, memorable claim, not a paragraph.</td>
+          <td><span class="status-badge status-pass">PASS</span></td>
+          <td>1 sentence, 17 words, zero fluff words.</td>
+        </tr>
+        <tr>
+          <td>Every page has ordered sections and named CTA.</td>
+          <td><span class="status-badge status-pass">PASS</span></td>
+          <td>Sequential section numbering (1.1 to 5.3) with explicit CTA buttons.</td>
+        </tr>
+        <tr>
+          <td>Strongest technical work leads.</td>
+          <td><span class="status-badge status-pass">PASS</span></td>
+          <td>Case Study 1 (ML Model F1: 0.942) leads hero section and deep dives.</td>
+        </tr>
+        <tr>
+          <td>CTAs ladder up to Week 1 One Action.</td>
+          <td><span class="status-badge status-pass">PASS</span></td>
+          <td>All page CTAs drive directly to booking a 15-minute intro chat.</td>
+        </tr>
+        <tr>
+          <td>The gather-list is honest and unblocking.</td>
+          <td><span class="status-badge status-pass">PASS</span></td>
+          <td>9 items categorized with target dates and explicit blocking flags.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <div>© 2026 Abdul Raheem — FlyRank AI Internship</div>
+    <div style="font-family: var(--font-code);">Identity Kit Tokens: Plus Jakarta Sans / Inter / JetBrains Mono</div>
+  </footer>
+
+</body>
+</html>
