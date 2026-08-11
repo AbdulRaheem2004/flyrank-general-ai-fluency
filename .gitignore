@@ -1,15 +1,22 @@
 # FlyRank AI Internship Repository Git Ignore Configuration
 
-# Internal Log & Memory Files (Do NOT push to GitHub)
-WORK_LOG.md
-.agents/
+# Environment & Credentials
+.env
+.env.local
+*.env
 
-# Python Utility & PDF Generation Scripts (Do NOT push to GitHub)
-generate_pdfs.py
-build_all_assignment_pdfs.py
-*.py
+# Python Bytecode & Cache
 __pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
 
 # Execution & Debug Logs
 *.log
 scratch/
+.agents/
+
+# PDF Builder Scratch Scripts (Root only)
+build_all_assignment_pdfs.py
+build_prompt_ladder_pdf.py
+generate_pdfs.py

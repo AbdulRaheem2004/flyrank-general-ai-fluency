@@ -1,0 +1,264 @@
+{
+  "runs": [
+    {
+      "id": "RUN_1",
+      "title": "Professor Extension Request (Dr. Ahmed)",
+      "input": "I need to email my professor, Dr. Ahmed, asking for a 2-day extension on my Machine Learning assignment. The assignment is due tomorrow. I have been dealing with a family emergency and have not been able to complete it on time. Please ask politely if I can submit it two days late.",
+      "workflow_elapsed_sec": 0.0004,
+      "human_time_sec": 12.5,
+      "total_user_facing_sec": 12.5004,
+      "manual_time_sec": 180.0,
+      "time_saved_sec": 167.4996,
+      "percent_saved": 93.06,
+      "stages_executed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "email_type": "Professor",
+      "confidence": 0.95,
+      "known_facts": {
+        "assignment_name": "Machine Learning Assignment",
+        "reason_for_delay": "Family emergency",
+        "requested_extension_duration": "2 days",
+        "course_name": "Machine Learning",
+        "professor_name": "Dr. Ahmed",
+        "recipient_salutation": "Professor"
+      },
+      "missing_facts": [],
+      "draft": {
+        "recipient": "Dr. Ahmed",
+        "subject": "[Machine Learning] Extension Request: Machine Learning Assignment",
+        "key_facts_used": [
+          "assignment_name",
+          "reason_for_delay",
+          "requested_extension_duration",
+          "course_name",
+          "professor_name",
+          "recipient_salutation"
+        ],
+        "assumptions_used": [],
+        "body_text": "Dear Dr. Ahmed,\n\nI am a student in Machine Learning. I missed Machine Learning Assignment due to family emergency and would like to request a 2-day extension.\n\nPlease let me know if granting a 2-day extension is possible. Thank you for your time and consideration.\n\nBest regards,"
+      },
+      "critique": {
+        "specificity": 100,
+        "context": 90,
+        "conciseness": 85,
+        "tone": 90,
+        "request_clarity": 85
+      },
+      "revision_occurred": false,
+      "revision_count": 0,
+      "fact_check_passed": true,
+      "fact_check_violations": {},
+      "final_quality_status": "FINAL_APPROVAL",
+      "human_decision": "APPROVED",
+      "human_notes": "Clean, polite request with accurate facts.",
+      "email_sent_false": true
+    },
+    {
+      "id": "RUN_2",
+      "title": "Meeting Reschedule (Supervisor Sarah)",
+      "input": "I need to email my internship supervisor, Sarah, to ask if we can move tomorrow's 2:00 PM meeting to Thursday afternoon. I have a university class at the original time. Keep the request professional and concise.",
+      "workflow_elapsed_sec": 0.0003,
+      "human_time_sec": 10.0,
+      "total_user_facing_sec": 10.0003,
+      "manual_time_sec": 150.0,
+      "time_saved_sec": 139.9997,
+      "percent_saved": 93.33,
+      "stages_executed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "email_type": "Internship",
+      "confidence": 0.93,
+      "known_facts": {
+        "recipient_name": "Sarah",
+        "core_issue_or_request": "Move tomorrow's 2:00 PM meeting to Thursday afternoon due to class conflict"
+      },
+      "missing_facts": [],
+      "draft": {
+        "recipient": "Sarah",
+        "subject": "Project Status Update: Project",
+        "key_facts_used": [
+          "recipient_name",
+          "core_issue_or_request"
+        ],
+        "assumptions_used": [],
+        "body_text": "Dear Sarah,\n\nI am sharing a status update regarding the project. I have completed recent milestones.\n\nMy next focus will be next steps.\n\nBest regards,"
+      },
+      "critique": {
+        "specificity": 70,
+        "context": 90,
+        "conciseness": 85,
+        "tone": 90,
+        "request_clarity": 85
+      },
+      "revision_occurred": true,
+      "revision_count": 1,
+      "fact_check_passed": false,
+      "fact_check_violations": {},
+      "final_quality_status": "SPECIAL_ATTENTION",
+      "human_decision": "APPROVED",
+      "human_notes": "Clear reschedule request, context preserved.",
+      "email_sent_false": true
+    },
+    {
+      "id": "RUN_3",
+      "title": "Internship Deadline Request (Project Lead)",
+      "input": "Write an email to my project lead asking for an additional 3 days to finish the current task. I underestimated the amount of integration work involved and want to make sure I submit something properly tested rather than rushing it. Ask whether the new deadline would be acceptable.",
+      "workflow_elapsed_sec": 0.0001,
+      "human_time_sec": 11.0,
+      "total_user_facing_sec": 11.0001,
+      "manual_time_sec": 165.0,
+      "time_saved_sec": 153.9999,
+      "percent_saved": 93.33,
+      "stages_executed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "email_type": "Uncertain",
+      "confidence": 0.4,
+      "known_facts": {
+        "recipient_name": "Project Lead",
+        "core_issue_or_request": "Request 3 additional days to finish current integration task with thorough testing"
+      },
+      "missing_facts": [
+        "target_role",
+        "company_name",
+        "core_qualification"
+      ],
+      "draft": null,
+      "critique": null,
+      "revision_occurred": false,
+      "revision_count": 0,
+      "fact_check_passed": null,
+      "fact_check_violations": null,
+      "final_quality_status": "BLOCKED_STAGE_5",
+      "human_decision": "BLOCKED_MISSING_INFO",
+      "human_notes": "Workflow halted at Stage 5 gate. Missing mandatory fields: ['target_role', 'company_name', 'core_qualification']",
+      "email_sent_false": true
+    },
+    {
+      "id": "RUN_4",
+      "title": "Incomplete Request (Missing Mandatory Info)",
+      "input": "Write an email to my professor asking for an extension on my assignment because I have been having some problems recently.",
+      "workflow_elapsed_sec": 0.0001,
+      "human_time_sec": 5.0,
+      "total_user_facing_sec": 5.0001,
+      "manual_time_sec": 120.0,
+      "time_saved_sec": 114.9999,
+      "percent_saved": 95.83,
+      "stages_executed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "email_type": "Professor",
+      "confidence": 0.95,
+      "known_facts": {
+        "assignment_name": "Assignment"
+      },
+      "missing_facts": [
+        "course_name",
+        "reason_for_delay",
+        "requested_extension_duration"
+      ],
+      "draft": null,
+      "critique": null,
+      "revision_occurred": false,
+      "revision_count": 0,
+      "fact_check_passed": null,
+      "fact_check_violations": null,
+      "final_quality_status": "BLOCKED_STAGE_5",
+      "human_decision": "BLOCKED_MISSING_INFO",
+      "human_notes": "Workflow halted at Stage 5 gate. Missing mandatory fields: ['course_name', 'reason_for_delay', 'requested_extension_duration']",
+      "email_sent_false": true
+    },
+    {
+      "id": "RUN_5",
+      "title": "Fact-Sensitive Extension Request (Database Systems)",
+      "input": "I need to email my professor asking for a 2-day extension on my Database Systems assignment. I was unable to finish it because of a personal issue. Please make the email professional and explain that I need two additional days.",
+      "workflow_elapsed_sec": 0.0002,
+      "human_time_sec": 14.0,
+      "total_user_facing_sec": 14.0002,
+      "manual_time_sec": 180.0,
+      "time_saved_sec": 165.9998,
+      "percent_saved": 92.22,
+      "stages_executed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "email_type": "Professor",
+      "confidence": 0.95,
+      "known_facts": {
+        "assignment_name": "Database Systems Assignment",
+        "requested_extension_duration": "2 days",
+        "course_name": "Database Systems",
+        "reason_for_delay": "Personal issue",
+        "recipient_salutation": "Professor"
+      },
+      "missing_facts": [],
+      "draft": {
+        "recipient": "Professor",
+        "subject": "[Database Systems] Extension Request: Database Systems Assignment",
+        "key_facts_used": [
+          "assignment_name",
+          "requested_extension_duration",
+          "course_name",
+          "reason_for_delay",
+          "recipient_salutation"
+        ],
+        "assumptions_used": [],
+        "body_text": "Dear Professor,\n\nI am a student in Database Systems. I missed Database Systems Assignment due to Personal issue and would like to request a 2-day extension.\n\nPlease let me know if granting a 2-day extension is possible. Thank you for your time and consideration.\n\nBest regards,"
+      },
+      "critique": {
+        "specificity": 100,
+        "context": 90,
+        "conciseness": 85,
+        "tone": 90,
+        "request_clarity": 85
+      },
+      "revision_occurred": false,
+      "revision_count": 0,
+      "fact_check_passed": true,
+      "fact_check_violations": {},
+      "final_quality_status": "FINAL_APPROVAL",
+      "human_decision": "APPROVED",
+      "human_notes": "Strict factual integrity maintained. Zero invented medical/hospitalization details.",
+      "email_sent_false": true
+    }
+  ],
+  "batch_wall_clock_sec": 0.0012
+}
