@@ -20,3 +20,5 @@ scratch/
 build_all_assignment_pdfs.py
 build_prompt_ladder_pdf.py
 generate_pdfs.py
+WORK_LOG.md
+

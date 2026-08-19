@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdul Raheem | AI/ML Engineering Portfolio</title>
+  <meta name="description" content="Production-ready ML/AI systems with verifiable performance metrics, benchmark notebooks, and clean visual web interfaces.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-color: #F8FAFC;
+      --text-color: #0F172A;
+      --primary-color: #1E40AF;
+      --metric-accent: #059669;
+      --border-color: #E2E8F0;
+      --card-bg: #FFFFFF;
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 640px;
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--metric-accent);
+      background: rgba(5, 150, 105, 0.08);
+      border: 1px solid rgba(5, 150, 105, 0.2);
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--metric-accent);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: var(--text-color);
+    }
+
+    p.proof-statement {
+      font-size: 1rem;
+      color: #475569;
+      margin-bottom: 2rem;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .metric-card {
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .metric-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: #64748B;
+      text-transform: uppercase;
+    }
+
+    .metric-value {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-top: 0.25rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      background: var(--primary-color);
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background: #1D4ED8;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: #94A3B8;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <div class="status-badge">
+      <span class="status-dot"></span> PIPELINE: EMPTY BUT LIVE
+    </div>
+    
+    <h1>Abdul Raheem</h1>
+    <p class="proof-statement">
+      Building production-ready ML/AI systems with verifiable performance metrics, benchmark notebooks, and clean visual web interfaces.
+    </p>
+
+    <div class="metric-grid">
+      <div class="metric-card">
+        <div class="metric-label">Stack</div>
+        <div class="metric-value">Vanilla HTML5/CSS</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Latency / Build</div>
+        <div class="metric-value">0ms (Static)</div>
+      </div>
+    </div>
+
+    <a href="#" class="cta-button">Request Technical Walkthrough</a>
+  </main>
+
+  <footer>
+    FlyRank AI Internship · Week 4 Deployment Milestone
+  </footer>
+
+</body>
+</html>
